@@ -79,7 +79,7 @@
       NSMutableSet *temporaryRetainedObjects = [NSMutableSet new];
       @try {
         for (id subobject in self.object) {
-          if (retainsKeys && subobject != nil) {
+          if (retainsKeys) {
             FBObjectiveCGraphElement *element = FBWrapObjectGraphElement(self, subobject, self.configuration);
             if (element) {
               [temporaryRetainedObjects addObject:element];

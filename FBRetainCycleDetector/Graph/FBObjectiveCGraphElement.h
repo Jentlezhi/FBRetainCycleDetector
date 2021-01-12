@@ -41,7 +41,8 @@
  (for example ivar names, struct references). For more check FBObjectReference protocol.
  */
 @property (nonatomic, copy, readonly, nullable) NSArray<NSString *> *namePath;
-@property (nonatomic, weak, nullable) id object;
+//@property (nonatomic, weak, nullable) id object;
+@property (nonatomic, strong, nullable) id object;
 @property (nonatomic, readonly, nonnull) FBObjectGraphConfiguration *configuration;
 
 /**
